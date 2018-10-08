@@ -11,5 +11,6 @@ ENV ZEPPELIN_LOG_DIR='/logs'
 
 VOLUME /logs
 VOLUME /notebook
+VOLUME /var/data
 
 EXPOSE 8080
