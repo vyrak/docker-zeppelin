@@ -4,6 +4,10 @@ Zeppelin 0.8.0 with Spark 2.3.1 support
 ```
 docker run -d -p 8080:8080 vbunleang/zeppelin
 ```
+or with persistent volumes
+```
+docker run -d -p 8080:8080 -v "$(pwd)/notebook:/var/notebook" -v "$(pwd)/data:/var/data" vbunleang/zeppelin
+```
 
 ## Dockerfile
 
@@ -18,6 +22,7 @@ ZEPPELIN_LOG_DIR      = /logs
 ```
 /logs
 /notebook
+/var/data
 ```
 
 ### Ports
